@@ -1,6 +1,7 @@
 :root {
     --bs-roxo: #4a0a6a;
     --bs-lilas: #d29fef;
+    --bs-indigo: #6610f2;
 }
 
 .bg-roxo{
@@ -11,12 +12,20 @@
     background-color: #d29fef !important;
 }
 
+.bg-indigo{
+    background-color: #7234d4 !important;
+}
+
 .text-roxo{
     color: #4a0a6a !important;
 }
 
 .text-lilas{
     color: #d29fef;
+}
+
+.text-indigo{
+    color: #7234d4;
 }
 
 .btn-roxo{
@@ -40,5 +49,17 @@
 .btn-lilas:hover{
     background-color: #b571dc;
     border-color: #b571dc;
+    color: aliceblue;
+}
+
+.btn-indigo{
+    background-color: #7234d4;
+    border-color: #5c2ca9;
+    color: aliceblue;
+}
+
+.btn-indigo:hover {
+    background-color: #7234d4;
+    border-color: #5c2ca9;
     color: aliceblue;
 }
