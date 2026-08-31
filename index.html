@@ -9,8 +9,28 @@
 </head>
 <body>
     <header>
-        
-    </header>
+  <nav class="navbar navbar-expand-lg bg-roxo" data-bs-theme="dark">
+    <div class="container">
+      
+      <!-- Nome do Projeto / Título -->
+      <a class="navbar-brand text-white fw-bold fs-3" href="#">Fucinhos de Luz</a>
+
+      <!-- Botão Hambúrguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links do Menu -->
+      <div class="collapse navbar-collapse" id="menuNavegacao">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Nossos Pets</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Formulário</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
     <main class="container my-5">
         <h2 class="text-center mb-4">Nossos Pets</h2>
         <section id="home" class="row g-3">
@@ -22,7 +42,7 @@
 
     </footer>
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/script.js"></script>
 </body>
 </html>
