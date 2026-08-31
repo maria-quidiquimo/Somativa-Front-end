@@ -1,0 +1,21 @@
+{
+  "name": "somativa-front-end",
+  "version": "1.0.0",
+  "description": "Repositório para somativa de front - grupo: Felipe, Laisla e Maria Eduarda\r ⭐",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maria-quidiquimo/Somativa-Front-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maria-quidiquimo/Somativa-Front-end/issues"
+  },
+  "homepage": "https://github.com/maria-quidiquimo/Somativa-Front-end#readme"
+}
