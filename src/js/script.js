@@ -1,10 +1,11 @@
 class Cachorro {
-  constructor(nome, raca, idade, disponivel, descricao = "") {
+  constructor(nome, raca, idade, disponivel, descricao = "", imagem = "") {
     this.nome       = nome;
     this.raca       = raca;
     this.idade      = idade;
     this.disponivel = disponivel;
     this.descricao  = descricao;
+    this.imagem = imagem
   }
 }
 
@@ -33,6 +34,7 @@ function criarCardCachorro(cachorro) {
   const card = document.createElement('article');
   card.className = 'card-Cachorro card h-100 shadow-sm';
   card.innerHTML = `
+  <img src="${cachorro.imagem}" class="card-img-top object-fit-cover" alt="Foto de ${cachorro.nome}" style="height: 200px;">
     <div class="card-body">
       <h5 class="card-title fw-bold">${cachorro.nome}</h5>
       <p class="card-text text-muted mb-1"><strong>Raça:</strong> ${cachorro.raca}</p>
@@ -47,7 +49,8 @@ function criarCardCachorro(cachorro) {
         data-raca="${cachorro.raca}"
         data-idade="${cachorro.idade}"
         data-disponivel="${statusTexto}"
-        data-descricao="${cachorro.descricao}"> Ver detalhes </button>
+        data-descricao="${cachorro.descricao}"
+        data-imagem="${cachorro.imagem}"> Ver detalhes </button>
     </div>
   `;
 
@@ -79,11 +82,13 @@ modalCachorro.addEventListener('show.bs.modal', (event) => {
   const idade = button.getAttribute('data-idade');
   const disponivel = button.getAttribute('data-disponivel');
   const descricao = button.getAttribute('data-descricao');
+  const imagem = button.getAttribute('data-imagem')
 
   // Seleção dos elementos internos do modal
   const modalNome = modalCachorro.querySelector('#modalNome');
   const modalRaca = modalCachorro.querySelector('#modalRaca');
   const modalDisponivel = modalCachorro.querySelector('#modalDisponivel');
+  const modalImagem = modalCachorro.querySelector('#modalImagem');
   const btnAdotar = modalCachorro.querySelector('.modal-footer button');
 
   // Atualização dos textos
@@ -101,6 +106,11 @@ modalCachorro.addEventListener('show.bs.modal', (event) => {
     btnAdotar.disabled = true;
     btnAdotar.textContent = "Indisponível";
   }
+
+  if (modalImagem) {
+      modalImagem.src = imagem;
+      modalImagem.alt = `Foto de ${nome}`;
+    }
 });
 
 const btnAdotar = document.querySelector('#btnAdotar')
