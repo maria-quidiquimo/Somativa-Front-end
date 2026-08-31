@@ -40,14 +40,14 @@ function criarCardCachorro(cachorro) {
       <p class="card-text fs-6 fw-bold ${statusClasse}">${statusTexto}</p>
     </div>
     <div class="card-footer bg-transparent border-top-0 pb-3">
-      <button class="btn btn-primary w-100"
-              data-bs-toggle="modal"
-              data-bs-target="#modalCachorro"
-              data-nome="${cachorro.nome}"
-              data-disponivel="${statusTexto}"
-              data-descricao="${cachorro.descricao}">
-        Ver detalhes
-      </button>
+      <button class="btn btn-lilas w-100"
+        data-bs-toggle="modal"
+        data-bs-target="#modalCachorro"
+        data-nome="${cachorro.nome}"
+        data-raca="${cachorro.raca}"
+        data-idade="${cachorro.idade}"
+        data-disponivel="${statusTexto}"
+        data-descricao="${cachorro.descricao}"> Ver detalhes </button>
     </div>
   `;
 
@@ -66,3 +66,54 @@ function renderizarHome() {
 
 // Inicializa a renderização dos cards
 renderizarHome();
+
+const modalCachorro = document.getElementById('modalCachorro');
+
+modalCachorro.addEventListener('show.bs.modal', (event) => {
+  // Botão que acionou o modal
+  const button = event.relatedTarget;
+
+  // Captura dos dados informados no botão
+  const nome = button.getAttribute('data-nome');
+  const raca = button.getAttribute('data-raca');
+  const idade = button.getAttribute('data-idade');
+  const disponivel = button.getAttribute('data-disponivel');
+  const descricao = button.getAttribute('data-descricao');
+
+  // Seleção dos elementos internos do modal
+  const modalNome = modalCachorro.querySelector('#modalNome');
+  const modalRaca = modalCachorro.querySelector('#modalRaca');
+  const modalDisponivel = modalCachorro.querySelector('#modalDisponivel');
+  const btnAdotar = modalCachorro.querySelector('.modal-footer button');
+
+  // Atualização dos textos
+  modalNome.textContent = nome;
+  modalRaca.textContent = `Raça: ${raca} • Idade: ${idade} ${descricao ? '— ' + descricao : ''}`;
+  modalDisponivel.textContent = disponivel;
+
+  // Alterna a cor do status e ativa/desativa o botão de adoção
+  if (disponivel === "Disponível para Adoção") {
+    modalDisponivel.className = "fs-5 fw-bold text-success";
+    btnAdotar.disabled = false;
+    btnAdotar.textContent = "Adotar Agora";
+  } else {
+    modalDisponivel.className = "fs-5 fw-bold text-danger";
+    btnAdotar.disabled = true;
+    btnAdotar.textContent = "Indisponível";
+  }
+});
+
+const btnAdotar = document.querySelector('#btnAdotar')
+
+btnAdotar.addEventListener('click', () => {
+    const nomePet = document.getElementById('modalNome').textContent;
+
+    // Feedback de confirmação
+    alert(`🎉 Parabéns! Registramos seu interesse em adotar o(a) ${nomePet}.\nNossa equipe entrará em contato em breve!`);
+
+    // Fecha o modal via Bootstrap JS
+    const modalInstance = bootstrap.Modal.getInstance(document.getElementById('modalCachorro'));
+    if (modalInstance) {
+        modalInstance.hide();
+    }
+});
