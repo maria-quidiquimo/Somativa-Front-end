@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/maria-quidiquimo/Somativa-Front-end/issues"
   },
-  "homepage": "https://github.com/maria-quidiquimo/Somativa-Front-end#readme"
+  "homepage": "https://github.com/maria-quidiquimo/Somativa-Front-end#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
 }
