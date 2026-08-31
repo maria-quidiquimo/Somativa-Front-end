@@ -1,0 +1,44 @@
+:root {
+    --bs-roxo: #4a0a6a;
+    --bs-lilas: #d29fef;
+}
+
+.bg-roxo{
+    background-color: #4a0a6a !important;
+}
+
+.bg-lilas{
+    background-color: #d29fef !important;
+}
+
+.text-roxo{
+    color: #4a0a6a !important;
+}
+
+.text-lilas{
+    color: #d29fef;
+}
+
+.btn-roxo{
+    background-color: #4a0a6a;
+    border-color: #4a0a6a;
+    color: aliceblue;
+}
+
+.btn-roxo:hover{
+    background-color: #29033b;
+    border-color: #29033b;
+    color: aliceblue;
+}
+
+.btn-lilas{
+    background-color: #d29fef;
+    border-color: #d29fef;
+    color: aliceblue;
+}
+
+.btn-lilas:hover{
+    background-color: #b571dc;
+    border-color: #b571dc;
+    color: aliceblue;
+}
