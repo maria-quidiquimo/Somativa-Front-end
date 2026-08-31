@@ -10,16 +10,16 @@ class Cachorro {
 }
 
 const dogList = [
-  new Cachorro("Bob", "Bulldog", "1 ano e 6 meses", true, "Muito dócil e brincalhão."),
-  new Cachorro("Lila", "Pitbull", "6 meses", true, "Adora correr no parque."),
-  new Cachorro("Thor", "Golden Retriever", "2 anos", true, "Se dá bem com outros animais."),
-  new Cachorro("Mel", "Poodle", "3 anos", false, "Já foi adotada."),
-  new Cachorro("Pingo", "Vira-Lata (SRD)", "5 anos", true, "Calmo e companheiro."),
-  new Cachorro("Luna", "Shih Tzu", "4 anos", true, "Ideal para apartamentos."),
-  new Cachorro("Pipoca", "Beagle", "1 ano", false, "Em processo de adoção."),
-  new Cachorro("Caramelo", "Vira-Lata (SRD)", "2 anos e 3 meses", true, "Muito enérgico."),
-  new Cachorro("Max", "Pastor Alemão", "4 anos", true, "Excelente cão de guarda."),
-  new Cachorro("Bella", "Dachshund", "8 meses", true, "Pequena e carinhosa.")
+  new Cachorro("Bob", "Bulldog", "1 ano e 6 meses", true, "Muito dócil e brincalhão.", 'https://i.pinimg.com/1200x/5e/58/01/5e5801dd292b55eb1787bc088ddd51fb.jpg'),
+  new Cachorro("Lila", "Pitbull", "6 meses", true, "Adora correr no parque.", 'https://i.pinimg.com/1200x/7f/f4/7f/7ff47f6558f97f50d76660c35ff13900.jpg'),
+  new Cachorro("Thor", "Golden Retriever", "2 anos", true, "Se dá bem com outros animais.", 'https://i.pinimg.com/736x/7d/ba/48/7dba484ef4f77f4e73dd23602e67f8b0.jpg'),
+  new Cachorro("Mel", "Poodle", "3 anos", false, "Já foi adotada.", ' https://i.pinimg.com/1200x/e5/45/09/e5450930676852620d865429c7d46fe6.jpg'),
+  new Cachorro("Pingo", "Vira-Lata (SRD)", "5 anos", true, "Calmo e companheiro.", 'https://i.pinimg.com/736x/5b/78/9b/5b789ba15f4ceb9bd50a685cad8831aa.jpg'),
+  new Cachorro("Luna", "Shih Tzu", "4 anos", true, "Ideal para apartamentos.", 'https://i.pinimg.com/736x/7b/35/1f/7b351fa355d1f4e31cd6d1d40ae9721e.jpg'),
+  new Cachorro("Pipoca", "Beagle", "1 ano", false, "Em processo de adoção.", 'https://http2.mlstatic.com/D_NQ_NP_625114-MCO92277390884_092025-O.webp'),
+  new Cachorro("Caramelo", "Vira-Lata (SRD)", "2 anos e 3 meses", true, "Muito enérgico.", 'https://cdn.folhape.com.br/upload/dn_arquivo/2024/07/shutterstock-1479050870.jpg'),
+  new Cachorro("Max", "Pastor Alemão", "4 anos", true, "Excelente cão de guarda.", 'https://blog-static.petlove.com.br/wp-content/uploads/2018/05/pastor-alemao-filhote.jpg'),
+  new Cachorro("Bella", "Dachshund", "8 meses", true, "Pequena e carinhosa.", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-611m5n8VbHSXTnTngm0K2e9uFAp70ahGfqYI4jn9bXs3_5Y-JuH4Aos&s=10')
 ];
 
 const containerHome = document.querySelector('#home');
@@ -34,7 +34,7 @@ function criarCardCachorro(cachorro) {
   const card = document.createElement('article');
   card.className = 'card-Cachorro card h-100 shadow-sm';
   card.innerHTML = `
-  <img src="${cachorro.imagem}" class="card-img-top object-fit-cover" alt="Foto de ${cachorro.nome}" style="height: 200px;">
+  <img src="${cachorro.imagem}" class="card-img-top object-fit-cover" alt="Foto de ${cachorro.nome}" style="height: 500px;">
     <div class="card-body">
       <h5 class="card-title fw-bold">${cachorro.nome}</h5>
       <p class="card-text text-muted mb-1"><strong>Raça:</strong> ${cachorro.raca}</p>
