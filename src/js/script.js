@@ -21,7 +21,7 @@ const dogList = [
   new Cachorro("Bella", "Dachshund", "8 meses", true, "Pequena e carinhosa.")
 ];
 
-const containerHome = document.querySelector('.container');
+const containerHome = document.querySelector('#home');
 
 function criarCardCachorro(cachorro) {
   const col = document.createElement('div');
