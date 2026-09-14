@@ -13,7 +13,7 @@ const dogList = [
   new Cachorro("Bob", "Bulldog", "1 ano e 6 meses", true, "Muito dócil e brincalhão.", 'https://i.pinimg.com/1200x/5e/58/01/5e5801dd292b55eb1787bc088ddd51fb.jpg'),
   new Cachorro("Lila", "Pitbull", "6 meses", true, "Adora correr no parque.", 'https://i.pinimg.com/1200x/7f/f4/7f/7ff47f6558f97f50d76660c35ff13900.jpg'),
   new Cachorro("Thor", "Golden Retriever", "2 anos", true, "Se dá bem com outros animais.", 'https://i.pinimg.com/736x/7d/ba/48/7dba484ef4f77f4e73dd23602e67f8b0.jpg'),
-  new Cachorro("Mel", "Poodle", "3 anos", false, "Já foi adotada.", ' https://i.pinimg.com/1200x/e5/45/09/e5450930676852620d865429c7d46fe6.jpg'),
+  new Cachorro("Mel", "Poodle", "3 anos", false, "Já foi adotada.", 'https://i.pinimg.com/1200x/e5/45/09/e5450930676852620d865429c7d46fe6.jpg'),
   new Cachorro("Pingo", "Vira-Lata (SRD)", "5 anos", true, "Calmo e companheiro.", 'https://i.pinimg.com/736x/5b/78/9b/5b789ba15f4ceb9bd50a685cad8831aa.jpg'),
   new Cachorro("Luna", "Shih Tzu", "4 anos", true, "Ideal para apartamentos.", 'https://i.pinimg.com/736x/7b/35/1f/7b351fa355d1f4e31cd6d1d40ae9721e.jpg'),
   new Cachorro("Pipoca", "Beagle", "1 ano", false, "Em processo de adoção.", 'https://http2.mlstatic.com/D_NQ_NP_625114-MCO92277390884_092025-O.webp'),
@@ -74,8 +74,8 @@ const modalCachorro = document.getElementById('modalCachorro');
 
 modalCachorro.addEventListener('show.bs.modal', (event) => {
   // Botão que acionou o modal
-  const button = event.relatedTarget;
-
+  const button = event.relatedTarget; //Representa o botão "Ver Detalhes"
+ 
   // Captura dos dados informados no botão
   const nome = button.getAttribute('data-nome');
   const raca = button.getAttribute('data-raca');
@@ -84,7 +84,7 @@ modalCachorro.addEventListener('show.bs.modal', (event) => {
   const descricao = button.getAttribute('data-descricao');
   const imagem = button.getAttribute('data-imagem')
 
-  // Seleção dos elementos internos do modal
+  // Seleção dos elementos internos (do HTML) do modal
   const modalNome = modalCachorro.querySelector('#modalNome');
   const modalRaca = modalCachorro.querySelector('#modalRaca');
   const modalDisponivel = modalCachorro.querySelector('#modalDisponivel');
@@ -124,6 +124,6 @@ btnAdotar.addEventListener('click', () => {
     // Fecha o modal via Bootstrap JS
     const modalInstance = bootstrap.Modal.getInstance(document.getElementById('modalCachorro'));
     if (modalInstance) {
-        modalInstance.hide();
+        modalInstance.hide(); //Instância controlada pelo BootStrap.
     }
 });
