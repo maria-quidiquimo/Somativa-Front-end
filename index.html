@@ -27,3 +27,69 @@
           <li class="nav-item"><a class="nav-link text-white" href="#formulario">Formulário</a></li>
         </ul>
       </div>
+
+    </div>
+  </nav>
+</header>
+    <main class="container my-5">
+        <h2 class="text-center mb-4">Nossos Pets</h2>
+        <section id="home" class="row g-3">
+        </section>
+
+        <hr class="my-5">
+    </main>
+    <div class="modal fade" id="modalCachorro" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-indigo text-white">
+            <h5 class="modal-title" id="modalNome">Nome do Pet</h5>
+            <button type="button" class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img src="" id="modalImagem" class="img-fluid w-100 object-fit-cover" alt="Foto do Pet" style="height: 300px;">
+            <p id="modalRaca" class="text-muted"></p>
+            <p id="modalDisponivel" class="fs-4 fw-bold text-success"></p>
+          </div>
+          <div class="modal-footer">
+            <button id="btnAdotar" class="btn btn-roxo w-100">Adotar Agora</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="row justify-content-center text-center" id="formulario">
+      <div class="col-12 col-md-8 col-lg-6" >
+        <h2>Quer fazer uma adoção?</h2>
+        <p>Preencha o formulário com todas as suas informações de contato!</p>
+        <form class="">
+          <div class="mb-3">
+            <label for="form-label"> Seu nome: </label>
+            <input type="text" class="form-control" placeholder="Nome completo">
+          </div>
+
+          <div>
+            <label for="form-label"> Seu e-mail: </label>
+            <input type="email" class="form-control" placeholder="seuemail@email.com">
+          </div>
+
+           <div>
+            <label for="form-label"> Seu numero de telefone (whatsapp): </label>
+            <input type="tel" class="form-control" placeholder="(DDD) 91234-5678">
+          </div>
+
+          <button type="button" class="btn btn-roxo w-100"> Enviar informações</button>
+
+        </form>
+      </div>
+    </section>
+
+    <footer class="text-center text-white bg-roxo py-4 mt-5 Encontre-nos nas redes socias">
+      <p>Focinhos de Luz</p>
+      <p>Encontre-nos nas redes sociais:  @focinhosdeluz_oficial</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
